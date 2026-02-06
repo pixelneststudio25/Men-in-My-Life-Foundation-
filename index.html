@@ -318,20 +318,19 @@
     }
 
     .hero-logo-image {
-      width: 280px;
-      height: 280px;
+      width: 300px;
+      height: 300px;
       background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(196, 30, 58, 0.1));
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       border: 5px solid var(--accent-gold);
-  /* Medium Glow Effect & Original Shadow */
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 25px 8px var(--accent-gold);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
       margin-bottom: 40px;
       position: relative;
       overflow: hidden;
-}
+    }
 
     .hero-logo-image:before {
       content: '';
@@ -1265,6 +1264,85 @@
       opacity: 1;
       visibility: visible;
     }
+    /* Our Projects Section Styles */
+    #projects {
+      padding: 100px 0;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .project-card {
+      background: var(--light-bg);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      border-top: 5px solid var(--primary-purple);
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(74, 30, 124, 0.15);
+    }
+
+    .project-icon {
+      width: 70px;
+      height: 70px;
+      background: rgba(74, 30, 124, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--primary-purple);
+      font-size: 28px;
+    }
+
+    .project-card h3 {
+      color: var(--deep-purple);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    .project-card p {
+      color: #555;
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+    .project-subcard {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      padding: 18px;
+      margin-top: 20px;
+      border-left: 4px solid var(--accent-gold);
+    }
+
+    .project-subcard h4 {
+      color: var(--primary-purple);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Responsive Design for Projects */
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+      
+      .project-card {
+        padding: 25px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1283,6 +1361,7 @@
         </div>
         <div class="logo-text">
           <h1>MEN IN MY LIFE FOUNDATION</h1>
+          <p>Building Generations of Righteousness</p>
         </div>
       </div>
       
@@ -1331,7 +1410,7 @@
           <div class="logo-inner">
           </div>
         </div>
-        <p style="color: var(--light-gold); font-weight: 600; font-size: 1.1rem; text-align: center;">Building Generations of Righteousness</p>
+        <p style="color: var(--light-gold); font-weight: 600; font-size: 1.1rem; text-align: center;">Est. 2015 | Registered 2017</p>
       </div>
       
       <div class="hero-content slide-up">
@@ -1430,7 +1509,7 @@
         <div class="founder-image"></div>
         
         <div class="founder-text">
-            <h3>QUEEN ESTHER NAILAH Yakubu</h3>
+            <h3>Queen Esther Na'ilah YAKUBU</h3>
             <h4>Visionary & Spiritual Leader</h4>
             
             <p>With a divine calling received in 1999, our founder has been instrumental in bringing the vision of Men In My Life Foundation to reality. Her passion for building righteous men and strong families stems from a deep conviction that transformed lives lead to transformed communities.</p>
@@ -1440,7 +1519,7 @@
             <p>Her commitment to the "4 Generations of Righteousness" vision is reflected in every aspect of the ministry's work, from prayer networks to mentorship programs and community outreach initiatives.</p>
             
             <div class="founder-quote">
-            <p>"When God gives you a vision for the men in your life, it's not just for today. It's a legacy that will impact generations to come."</p>
+            <p>"Whatever affects the men in our lives affects us women positively or negatively."</p>
             <cite>— Founder, Men In My Life Foundation</cite>
             </div>
         </div>
@@ -1448,26 +1527,121 @@
     </div>
     </section>
 
-  <!-- History Section -->
+  <!--  History Section -->
   <section id="history" style="background-color: var(--light-bg);">
     <div class="container">
       <div class="section-header">
-        <h2>Our Journey</h2>
-        <p>From a divine vision to a thriving ministry impacting thousands of lives.</p>
+        <h2>Our Journey of Faith & Prayer</h2>
+        <p>From a divine vision to a thriving ministry impacting women, men, and families across Nigeria.</p>
       </div>
-      
-      <div class="timeline">
-        <div class="milestones" style="grid-template-columns: repeat(4, 1fr);">
-          <div class="milestone">
-            <i class="fas fa-lightbulb" style="color: var(--accent-red);"></i>
-            <h4>1999</h4>
-            <p>The vision was received during a time of prayer and fasting.</p>
+
+      <!-- Detailed Timeline -->
+      <div class="about-content" style="grid-template-columns: 1fr; gap: 30px;">
+        <div class="about-text">
+          <h3>A Timeline Guided by Prayer</h3>
+          <p><strong>1999/2000:</strong> The foundational vision for Men In My Life was received from God.</p>
+          <p><strong>Early 2000s:</strong> We began praying with women in every city visited—Jos, Lagos, Abuja, Keffi—for the men in our lives.</p>
+          <p><strong>2007:</strong> Began dedicated prayer sessions with Co-Founder Zainab NDA Isaiah. Starting with just the two of us, it grew after two years to include other women, meeting at the Co-Founder's restaurant, Banana Republic in Asokoro, Abuja, and sometimes at Millennium Park.</p>
+          <p><strong>2012:</strong> The Founder relocated to Jos, planting seeds for the ministry's next phase.</p>
+          <p><strong>2015:</strong> Officially launched the online prayer and seminar ministry, expanding our reach nationally.</p>
+          <p><strong>Present Day:</strong> MIML has grown into a multi-faceted ministry with dynamic projects, a committed Board of Trustees, and a powerful Inner Circle of women dedicated to God and the men in their lives.</p>
+
+          <!-- Foundational Scripture Block -->
+          <div class="founder-quote" style="margin-top: 40px; background: linear-gradient(135deg, #f9f7ff, #f0ebff);">
+            <h4 style="color: var(--deep-purple); margin-bottom: 15px;">Our Foundational Scripture</h4>
+            <p style="font-style: normal; color: #555;">
+              <em>"The midwives feared God and did not do as the king of Egypt commanded them, but they let the boy babies live... So God was good to the midwives... And because the midwives feared God, He established families and households for them."</em>
+            </p>
+            <cite style="color: var(--accent-gold); font-weight: 600;">— Exodus 1:17, 20-21 (AMP)</cite>
+            <p style="margin-top: 15px; font-size: 0.95rem; color: #666;">
+              This scripture is the bedrock of our mission. Like the Hebrew midwives, we stand in faith and courage for the men in our lives, trusting God to establish and protect families.
+            </p>
           </div>
-          <div class="milestone">
-            <i class="fas fa-laptop" style="color: var(--accent-red);"></i>
-            <h4>2015</h4>
-            <p>Launched online ministry through social media and digital platforms.</p>
+        </div>
+      </div>
+
+      <!-- Visual Timeline Milestones -->
+      <div class="milestones" style="margin-top: 50px;">
+        <div class="milestone">
+          <i class="fas fa-vision"></i>
+          <h4>Vision</h4>
+          <p>Received 1999</p>
+        </div>
+        <div class="milestone">
+          <i class="fas fa-pray"></i>
+          <h4>Prayer Begins</h4>
+          <p>Early 2000s</p>
+        </div>
+        <div class="milestone">
+          <i class="fas fa-handshake"></i>
+          <h4>Co-Founder Joins</h4>
+          <p>2007</p>
+        </div>
+        <div class="milestone">
+          <i class="fas fa-globe"></i>
+          <h4>Online Ministry</h4>
+          <p>2015</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Projects Section -->
+  <section id="projects" style="background-color: white;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Ministries & Projects</h2>
+        <p>Through focused initiatives, we build up individuals and families across generations.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Finishing Schools -->
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-graduation-cap"></i>
           </div>
+          <h3>MIML Finishing Schools</h3>
+          <p>Comprehensive training programs that equip different age groups with spiritual, moral, and practical life skills.</p>
+          
+          <div class="project-subcard">
+            <h4><i class="fas fa-child"></i> Kids & Teens Finishing School</h4>
+            <p>For ages 4-15. We teach the Bible, good morals, and practical hand skills to build a strong foundation for the future.</p>
+          </div>
+          
+          <div class="project-subcard">
+            <h4><i class="fas fa-heart"></i> Bridal Finishing School</h4>
+            <p>Prepares young ladies for marriage. Topics include purpose, choosing a partner, home care, body care, traditional etiquette, and hospitality across different tribes.</p>
+          </div>
+        </div>
+
+        <!-- Project 2: Value Revolution -->
+        <div class="project-card" style="border-top: 5px solid var(--accent-red);">
+          <div class="project-icon" style="background: rgba(196, 30, 58, 0.1); color: var(--accent-red);">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3>Value Revolution</h3>
+          <p>A dynamic project that <strong>drives core values through music</strong> and runs a strong campaign promoting sexual purity until marriage.</p>
+          <p>We use the universal language of music to positively influence culture and anchor young people in righteous values.</p>
+        </div>
+
+        <!-- Project 3: Men2Men -->
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Men2Men</h3>
+          <p>Our newly launched platform where men have a safe space to talk amongst themselves about their everyday life challenges and their faith journey.</p>
+          <p>This is a brotherhood dedicated to fostering honest conversation, mutual support, and spiritual growth.</p>
+        </div>
+
+        <!-- Project 4: Prayer Storms -->
+        <div class="project-card" style="border-top: 5px solid var(--accent-gold);">
+          <div class="project-icon" style="background: rgba(212, 175, 55, 0.1);">
+            <i class="fas fa-praying-hands"></i>
+          </div>
+          <h3>Prayer Storms</h3>
+          <p>The heartbeat of our ministry. We maintain a vibrant WhatsApp Prayer Storm Room where we pray regularly and execute intensive prayer chains lasting up to 72 hours.</p>
+          <p>This is our foundational work of intercession for the men in our lives and all the ministry's endeavors.</p>
         </div>
       </div>
     </div>
@@ -1519,14 +1693,14 @@
     </div>
 
     <!-- Optional: Additional info section -->
-    <!--<div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.1);">
+    <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.1);">
       <h4 style="color: var(--deep-purple); margin-bottom: 15px;">Other Ways to Give</h4>
       <p style="max-width: 700px; margin: 0 auto;">
         <strong>Bank Transfer:</strong> Men In My Life Foundation<br>
         <strong>Bank:</strong> [Your Bank Name] | <strong>Account:</strong> [Your Account Number]<br>
         <small>Please send a notification to 09036923002 after transferring.</small>
       </p>
-    </div>-->
+    </div>
   </div>
   </section>
 
@@ -1661,7 +1835,7 @@
           <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 20px; font-size: 0.95rem;">Building 4 generations of righteous men through faith, mentorship, and community.</p>
           <div class="social-links">
             <a href="https://web.facebook.com/themeninmylife/"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/meninmylifefoundation/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="https://www.youtube.com/@meninmylife9510"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
