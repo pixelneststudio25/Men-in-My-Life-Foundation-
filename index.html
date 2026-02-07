@@ -214,6 +214,88 @@
       transform: rotate(-135deg);
     }
 
+    /* Make header more compact on mobile */
+    @media (max-width: 768px) {
+      .header-container {
+        padding: 10px 15px; /* Reduce padding */
+        min-height: 60px; /* Set a smaller minimum height */
+      }
+
+      .logo-icon {
+        width: 40px; /* Make logo icon smaller */
+        height: 40px;
+        font-size: 18px;
+      }
+
+      .logo-text h1 {
+        font-size: 14px; /* Reduce foundation name size */
+        line-height: 1.2;
+      }
+
+      .logo-text p {
+        font-size: 9px; 
+      }
+
+      #home {
+        padding-top: 70px; 
+      }
+    }
+    @media (max-width: 768px) {
+
+      .hero-container {
+        gap: 40px;
+        padding: 20px 0;
+      }
+
+      .hero-logo {
+        padding-bottom: 30px; 
+      }
+
+      .hero-logo-image {
+        width: 200px; 
+        height: 200px;
+        margin-bottom: 20px;
+      }
+
+      .logo-inner i {
+        font-size: 50px; 
+      }
+
+      .logo-inner h2 {
+        font-size: 18px; 
+      }
+
+      .hero-content h2 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+      }
+
+      .hero-content p {
+        font-size: 1rem; 
+        line-height: 1.5;
+        margin-bottom: 25px;
+      }
+
+      .hero-btns {
+        flex-direction: column; 
+        gap: 12px;
+        margin-top: 25px;
+      }
+
+      .btn-primary, .btn-secondary {
+        padding: 12px 20px; 
+        font-size: 14px;
+        width: 100%; 
+        justify-content: center;
+      }
+
+      .hero-logo p {
+        font-size: 0.9rem;
+        margin-top: 10px;
+      }
+    }
+
     /* Mobile Menu - IMPROVED */
     .mobile-menu {
       position: fixed;
